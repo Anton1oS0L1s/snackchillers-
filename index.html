@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnackChillers</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    header {
+      background-color: #f5a9e1;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom: 4px solid #e63946;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 1rem;
+    }
+    .filters {
+      margin: 1rem 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff0f6;
+    }
+    footer {
+      background-color: #f5a9e1;
+      text-align: center;
+      padding: 1rem;
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+    #cart-button {
+      background-color: #e63946;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #cart-button:hover {
+      background-color: #c62828;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="image.png" alt="Snack Chiller's Logo" />
+    <h1>SnackChillers</h1>
+    <p>Tu rincón de snacks para cada antojo</p>
+    <div class="filters">
+      <select id="category-filter">
+        <option value="">Filtrar por tipo</option>
+        <option value="salado">Salados</option>
+        <option value="dulce">Dulces</option>
+        <option value="extra">Extras</option>
+      </select>
+      <input type="text" id="search-input" placeholder="Buscar snack..." />
+    </div>
+    <button id="cart-button">🛒 Carrito (<span id="cart-count">0</span>)</button>
+  </header>
+  <main>
+    <section class="snack-list" id="snack-list"></section>
+  </main>
+  <div class="cart-panel" id="cart-panel">
+    <h2>🛍️ Tu carrito</h2>
+    <div id="cart-items"></div>
+    <p class="total">Total: $<span id="cart-total">0.00</span></p>
+    <button id="checkout-btn">Realizar Pedido</button>
+    <button id="close-cart">Cerrar</button>
+  </div>
+  <footer>
+    <p>&copy; 2025 SnackChillers. Todos los derechos reservados.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
